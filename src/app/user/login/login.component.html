@@ -1,0 +1,10 @@
+<div class="form-group" *ngIf="!connectedUser">
+    <p>Veuillez vous connecter</p> 
+    <label for="password">Username</label>
+    <input type="text" class="form-control" [(ngModel)]="username">
+    <label for="password">Password</label>
+    <input type="password" class="form-control" [(ngModel)]="password">
+</div>
+    <!-- <div *ngIf="connectedUser">Bienvenue {{connectedUser.username}} !</div>
+    <button [disabled]="connectedUser" class="btn btn-primary" (click)="seConnecterUser()">Se connecter</button>
+    <button [disabled]="!connectedUser" class="btn btn-primary" (click)="seDeconnecterUser()">Se déconnecter</button> -->

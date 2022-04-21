@@ -1,0 +1,24 @@
+<table class="table table-hover">
+    <thead>
+        <th scope="col">Title</th>
+        <th scope="col">Artist</th>
+        <th scope="col">Album</th>
+        <th scope="col">Genre</th>
+        <th scope="col">Track Number</th>
+        <th scope="col">length</th>
+    </thead>
+    <tbody>
+        <tr scope="row" *ngFor="let song of songList;">
+            <td>{{song.title}}</td>
+            <td>{{song.artist.name}}</td>
+            <td>{{song.album.name}}</td>
+            <td>{{song.genre.label}}</td>
+            <td>{{song.trackNumber}}</td>
+            <td>{{song.length}}</td>
+                <!-- <td>
+                <a class="btn btn-primary" routerLink="/demo/demo8/edit/{{product.id}}">Edit</a>
+                <a class="btn btn-primary" (click)="deleteProduct(product.id)" >Delete</a>
+            </td> -->
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,16 @@
+<table class="table table-hover">
+    <thead>
+        <th scope="col">Name</th>
+        <th scope="col">Artist</th>
+    </thead>
+    <tbody>
+        <tr scope="row" *ngFor="let album of albumList;">
+            <td>{{album.name}}</td>
+            <td>{{album.artist.name}}</td>
+                <!-- <td>
+                <a class="btn btn-primary" routerLink="/demo/demo8/edit/{{product.id}}">Edit</a>
+                <a class="btn btn-primary" (click)="deleteProduct(product.id)" >Delete</a>
+            </td> -->
+        </tr>
+    </tbody>
+</table>

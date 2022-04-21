@@ -1,0 +1,103 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "axel",
+      "password": "123",
+      "active": true
+    },
+    {
+      "id": 2,
+      "username": "jordan",
+      "password": "123",
+      "active": true
+    },
+    {
+      "id": 3,
+      "username": "saad",
+      "password": "123",
+      "active": true
+    },
+    {
+      "username": "nath",
+      "password": "123",
+      "active": true,
+      "id": 4
+    },
+    {
+      "username": "fati",
+      "password": "123",
+      "active": true,
+      "id": 5
+    },
+    {
+      "username": "bob",
+      "password": "123",
+      "confirmPassword": "123",
+      "active": true,
+      "id": 6
+    }
+  ],
+  "songs": [
+    {
+      "id": 1,
+      "title": "You",
+      "artistId": 1,
+      "albumId": 1,
+      "genreId": 1,
+      "trackNumber": 1,
+      "length": 100,
+      "UserId": 1,
+      "fileLink": ""
+    },
+    {
+      "id": 2,
+      "title": "Tear It On Down",
+      "artistId": 1,
+      "albumId": 1,
+      "genreId": 1,
+      "trackNumber": 2,
+      "length": 100,
+      "UserId": 1,
+      "fileLink": ""
+    },
+    {
+      "id": 3,
+      "title": "Chained",
+      "artistId": 1,
+      "albumId": 1,
+      "genreId": 1,
+      "trackNumber": 3,
+      "length": 100,
+      "UserId": 1,
+      "fileLink": ""
+    }
+  ],
+  "artists": [
+    {
+      "id": 1,
+      "name": "Marvin Gaye"
+    }
+  ],
+  "albums": [
+    {
+      "id": 1,
+      "name": "In The Groove",
+      "artistId": 1
+    }
+  ],
+  "genres": [
+    {
+      "id": 1,
+      "label": "Soul"
+    }
+  ],
+  "playlists": [
+    {
+      "id": 1,
+      "name": "Soul playlist",
+      "description": "Soul music",
+      "userId": 1
+    }
+  ]
+}

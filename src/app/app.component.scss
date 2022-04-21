@@ -1,0 +1,28 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    height: 150px;
+    background-color: black
+}
+.main_title {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: end; */
+    // align-items: flex-end;
+    
+    p{
+        align-self: flex-end;
+        font-size: 100px;
+        font-weight: 900;
+        vertical-align: bottom;
+        color: white;
+    }
+}
+.sub_title {
+    color: aqua;
+    font-size: 50px;
+}
+.nav {
+    width: 70%;
+}
