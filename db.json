@@ -23,19 +23,6 @@
       "password": "123",
       "active": true,
       "id": 4
-    },
-    {
-      "username": "fati",
-      "password": "123",
-      "active": true,
-      "id": 5
-    },
-    {
-      "username": "bob",
-      "password": "123",
-      "confirmPassword": "123",
-      "active": true,
-      "id": 6
     }
   ],
   "songs": [

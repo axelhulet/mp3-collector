@@ -1,28 +1,44 @@
+main{
+    margin-top: 50px;
+}
 .header {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
+    justify-content: flex-end;
     height: 150px;
     background-color: black
 }
-.main_title {
-    /* display: flex;
+.all-title{
+    display: flex;
     flex-direction: column;
-    justify-content: end; */
-    // align-items: flex-end;
-    
-    p{
-        align-self: flex-end;
-        font-size: 100px;
-        font-weight: 900;
-        vertical-align: bottom;
-        color: white;
-    }
+    justify-content: flex-end;
+    height: 150px;
+}
+.main_title {
+    position: fixed;
+    z-index: 100;
+    align-self: flex-end;
+    height: 150px;
+    margin-bottom: 24px;
+    font-size: 150px;
+    font-weight: 900;
+    letter-spacing: -11px;
+    color: white;
 }
 .sub_title {
     color: aqua;
+    height: 50px;
+    margin-bottom: 8px;
+    padding-right: 22px;
     font-size: 50px;
+    z-index: 101;
 }
 .nav {
+    display: flex;
+    justify-self: flex-start;
     width: 70%;
+}
+.fa-solid{
+    color: black;
 }

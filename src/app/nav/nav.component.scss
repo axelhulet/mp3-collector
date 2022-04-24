@@ -3,10 +3,24 @@
     font-weight: 500;
     background-color: black;
 }
+.active{
+    color: aqua;
+}
 .navbar{
     padding-bottom: 0px;
 
     a {
         padding-bottom: 0px;
+    }
+}
+.dropdown-menu.show{
+    background-color: aqua;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    width: auto;
+    :hover{
+        background-color: white;
+        color: aqua;
     }
 }

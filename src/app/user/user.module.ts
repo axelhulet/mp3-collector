@@ -7,6 +7,7 @@ import { RegisterComponent } from './register/register.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IndexComponent } from './index/index.component';
 import { LoginComponent } from './login/login.component';
+import { EditComponent } from './edit/edit.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { LoginComponent } from './login/login.component';
     UserComponent,
     RegisterComponent,
     IndexComponent,
-    LoginComponent
+    LoginComponent,
+    EditComponent
   ],
   imports: [
     CommonModule,

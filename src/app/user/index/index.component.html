@@ -3,6 +3,7 @@
         <th scope="col">Username</th>
         <th scope="col">Password</th>
         <th scope="col">Active</th>
+        <th scope="col">Edit/Delete</th>
     </thead>
     <tbody>
         <tr scope="row" *ngFor="let user of userList;">
@@ -10,8 +11,8 @@
             <td>{{user.password}}</td>
             <td>{{user.active}}</td>
             <td>
-                <a class="btn btn-primary" routerLink="/user/edit/{{user.id}}">Edit</a>
-                <a class="btn btn-primary" (click)="deleteUser(user.id)" >Delete</a>
+                <a routerLink="/user/edit/{{user.id}}"><i class="fa-solid fa-pen-to-square me-2"></i></a><span style="font-weight: bold;">/</span>
+                <a (click)="deleteUser(user.id)" ><i class="fa-solid fa-trash-can ms-2"></i></a>
             </td>
         </tr>
     </tbody>

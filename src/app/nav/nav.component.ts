@@ -10,7 +10,11 @@ export class NavComponent implements OnInit {
 
   links : Array<Link> = [
     { title : "Home", url : "/"},
-    { title : "Users", url : "/user"},
+    { title : "Users", url : "/user", children : [
+      { title : "Index", url : "/user/index"},
+      { title : "Register", url : "/user/register"},
+      { title : "Login", url : "/user/login"}
+    ]},
     { title : "Songs", url : "/song"},
     { title : "Artists", url : "/artist"},
     { title : "Albums", url : "/album"},
