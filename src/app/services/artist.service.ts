@@ -12,6 +12,6 @@ export class ArtistService {
   constructor(private _http : HttpClient) { }
 
   getAll() : Observable<Artist[]> {
-    return this._http.get<Artist[]>(environment.api_url + "artists");
+    return this._http.get<Artist[]>(environment.api_url + "api/artists");
   }
 }

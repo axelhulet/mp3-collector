@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Filemp3 } from 'src/app/models/Filemp3';
+import { SongService } from 'src/app/services/song.service';
 
 @Component({
   templateUrl: './add.component.html',
@@ -8,40 +10,39 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class AddComponent implements OnInit {
 
-  myForm = new FormGroup({
-    name: new FormControl('', [Validators.required, Validators.minLength(3)]),
-    file: new FormControl('', [Validators.required]),
-    fileSource: new FormControl('', [Validators.required])
-  });
 
-  constructor(private http: HttpClient) { }
+
+  constructor(private _fb : FormBuilder, private http: HttpClient, private songService : SongService) { }
+
+  addForm! : FormGroup;
+  fileis64! : Filemp3;
 
   ngOnInit(): void {
-  }
-
-  get f(){
-    return this.myForm.controls;
+    this.addForm = this._fb.group({
+      file: [null, [ Validators.required]]
+    }
+    );
   }
      
-  onFileChange(event:any) {
-  
-    if (event.target.files.length > 0) {
-      const file = event.target.files[0];
-      this.myForm.patchValue({
-        fileSource: file
-      });
-    }
-  }
      
   submit(){
-    const formData = new FormData();
-    console.log(this.myForm);
-    formData.append('file', this.myForm.get('fileSource')?.value);
-   
-    this.http.post('http://localhost:8001/upload/upload.php', formData)
-      .subscribe(res => {
-        console.log(res);
-        alert('Uploaded Successfully.');
-      })
+    if(this.addForm.valid)
+    {
+        let filemp3 : Filemp3 = {...this.addForm.value};
+        this.songService.addSong(filemp3).subscribe(base64 => {
+          this.fileis64 = base64;
+        });
+    }else{
+      this.addForm.markAllAsTouched();
+    }
+  }
+  onChange($event:any){
+    let file = $event.target.files[0];
+    let reader = new FileReader();
+    reader.readAsDataURL(file);
+
+    reader.onload = (e: any) => {
+      this.addForm.get('file')?.setValue(e.target.result);
+    }
   }
 }

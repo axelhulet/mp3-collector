@@ -16,6 +16,7 @@ export class IndexComponent implements OnInit {
     this._songService.getAll().subscribe(
       data => this.songList = data
     );
-  }
+    console.log(this.songList);
 
+  }
 }

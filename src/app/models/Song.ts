@@ -6,15 +6,15 @@ import { User } from "./user";
 export class Song {
     id! : number;
     title! : string;
-    artistId! : number;
-    artist!: Artist;
-    albumId! : number;
-    album! : Album;
-    genreId! : number;
-    genre! : Genre;
-    trackNumber! : number;
+    artist_id! : number;
+    artist_name!: string;
+    album_id! : number;
+    album_name! : string;
+    genre_id! : number;
+    genre_label! : string;
+    track_number! : number;
     length! : number;
-    userId! : number;
-    user! : User;
-    fileLink! : string;
+    user_id! : number;
+    username! : string;
+    file_link! : string;
 }
